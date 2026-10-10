@@ -464,3 +464,15 @@ body.page-enter main { animation: fadeUp 0.6s ease; }
 
 /* Never let the page scroll sideways */
 html, body { max-width: 100%; overflow-x: clip; }
+/* ---------- Pinned header fix ---------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+/* Room for the pinned header so content doesn't hide under it */
+body { padding-top: var(--header-h); }
+/* Anchor links (like #visit) stop below the header */
+html { scroll-padding-top: 80px; }
