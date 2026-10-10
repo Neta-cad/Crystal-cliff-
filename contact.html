@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Crystal Cliff Schools</title>
+  <meta name="description" content="Contact Crystal Cliff Schools. Call, message on WhatsApp, send an enquiry or find us on the map.">
+  <meta name="theme-color" content="#29ABE2">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact Crystal Cliff Schools">
+  <meta property="og:description" content="Call, message or visit us.">
+  <meta property="og:image" content="assets/logo.png">
+
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>We would love to hear from you</p>
+        <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+      </div>
+    </section>
+
+    <!-- CONTACT DETAILS + FORM -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+
+          <!-- Details -->
+          <div class="reveal from-left">
+            <span class="eyebrow">Get in Touch</span>
+            <h2 style="margin-bottom:12px;">Talk to the school</h2>
+            <p style="color:var(--muted);margin-bottom:24px;">Call, message on WhatsApp, or send us a note. We will reply as soon as we can.</p>
+
+            <ul class="contact-list">
+              <li>
+                <div class="icon-box"><i data-lucide="map-pin"></i></div>
+                <div>
+                  <h4>Address</h4>
+                  <p data-bind="contact.address" data-placeholder="School address to be added"></p>
+                </div>
+              </li>
+              <li data-show-if="contact.phone">
+                <div class="icon-box gold"><i data-lucide="phone"></i></div>
+                <div>
+                  <h4>Phone</h4>
+                  <a data-link="tel"><span data-bind="contact.phone"></span></a>
+                </div>
+              </li>
+              <li data-show-if="contact.email">
+                <div class="icon-box"><i data-lucide="mail"></i></div>
+                <div>
+                  <h4>Email</h4>
+                  <a data-link="mail"><span data-bind="contact.email"></span></a>
+                </div>
+              </li>
+              <li>
+                <div class="icon-box gold"><i data-lucide="clock"></i></div>
+                <div>
+                  <h4>School hours</h4>
+                  <span class="open-badge" data-open-badge></span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="hero-actions" style="margin-top:8px;">
+              <a class="btn btn-primary" data-link="whatsapp" data-wa-message="Hello Crystal Cliff Schools, I would like to make an enquiry."><i data-lucide="message-circle"></i> WhatsApp</a>
+              <a class="btn btn-outline" data-link="directions"><i data-lucide="navigation"></i> Get Directions</a>
+            </div>
+          </div>
+
+          <!-- Message form -->
+          <div class="reveal from-right">
+            <div class="form-card" style="padding-top:26px;">
+              <h3 style="margin-bottom:6px;">Send a message</h3>
+              <p style="color:var(--muted);font-size:.92rem;margin-bottom:18px;">Your message is sent to the school.</p>
+
+              <form id="contactForm" novalidate>
+                <div class="field">
+                  <label for="contactName">Your name</label>
+                  <input type="text" id="contactName" name="contactName" autocomplete="name" placeholder="Your name" required>
+                  <span class="error-msg">Please enter your name.</span>
+                </div>
+                <div class="field">
+                  <label for="contactPhone">Phone number</label>
+                  <input type="tel" id="contactPhone" name="contactPhone" autocomplete="tel" inputmode="tel" placeholder="e.g. 0801 234 5678" required>
+                  <span class="error-msg">Please enter a valid phone number.</span>
+                </div>
+                <div class="field">
+                  <label for="contactEmail">Email (optional)</label>
+                  <input type="email" id="contactEmail" name="contactEmail" autocomplete="email" placeholder="you@example.com">
+                  <span class="error-msg">Please enter a valid email address.</span>
+                </div>
+                <div class="field">
+                  <label for="contactMessage">Message</label>
+                  <textarea id="contactMessage" name="contactMessage" rows="5" placeholder="How can we help?" required></textarea>
+                  <span class="error-msg">Please write a message.</span>
+                </div>
+                <button type="submit" class="btn btn-gold" style="width:100%;"><i data-lucide="send"></i> Send message</button>
+              </form>
+
+              <div class="form-success" id="contactSuccess">
+                <div class="icon-box"><i data-lucide="circle-check"></i></div>
+                <h3>Message ready</h3>
+                <p id="contactSuccessText">Your message is ready to send to the school.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Find Us</span>
+          <h2>Visit Crystal Cliff Schools</h2>
+          <p>Tap Get Directions to open the route in Google Maps.</p>
+        </div>
+        <div class="map-wrap reveal" data-map>
+          <div>
+            <i data-lucide="map" class="icon" style="width:40px;height:40px;margin:0 auto 10px;"></i>
+            <p>Map coming soon</p>
+          </div>
+        </div>
+        <p class="center mt-2"><a class="btn btn-primary" data-link="directions"><i data-lucide="navigation"></i> Get Directions</a></p>
+      </div>
+    </section>
+
+    <!-- FOLLOW US (hidden until a social link is added in config.js) -->
+    <section class="section" data-show-if="social.facebook">
+      <div class="container center">
+        <h2 style="margin-bottom:14px;">Follow us</h2>
+        <div class="social" style="justify-content:center;">
+          <a data-link="maps" aria-label="Find us on Google Maps"><i data-lucide="map-pin"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Quick answers</h2>
+        </div>
+        <div class="faq reveal">
+          <input class="faq-search" type="search" placeholder="Search questions..." aria-label="Search questions">
+          <div class="faq-item">
+            <button class="faq-q" type="button">How can I reach the school? <i data-lucide="chevron-down" class="icon"></i></button>
+            <div class="faq-a"><p>Use the form above, tap the WhatsApp button, or call the school using the details on this page.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button">Can I visit without an appointment? <i data-lucide="chevron-down" class="icon"></i></button>
+            <div class="faq-a"><p>It is best to book a visit first so someone is ready to welcome you. Use the Book a School Visit form on the Admissions page.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button">When will I get a reply? <i data-lucide="chevron-down" class="icon"></i></button>
+            <div class="faq-a"><p>The school replies as soon as it can during school hours. The Open Now badge on this page shows when the office is open.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

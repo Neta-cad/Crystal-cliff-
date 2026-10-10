@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us | Crystal Cliff Schools</title>
+  <meta name="description" content="The story of Crystal Cliff Schools, founded in 2018. Our values, our people and where we are going.">
+  <meta name="theme-color" content="#29ABE2">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About Crystal Cliff Schools">
+  <meta property="og:description" content="Our story, our values and our people.">
+  <meta property="og:image" content="assets/logo.png">
+
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>About Us</h1>
+        <p>Where every child is a treasure</p>
+        <div class="breadcrumb"><a href="index.html">Home</a> / About</div>
+      </div>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="section">
+      <div class="container split">
+        <div class="split-media reveal from-left">
+          <!-- Replace with a real photo: <img src="assets/school-front.jpg" alt="Crystal Cliff Schools building"> -->
+          <img class="media-logo" src="assets/logo.png" alt="Crystal Cliff Schools logo">
+        </div>
+        <div class="split-text reveal from-right">
+          <span class="eyebrow">Our Story</span>
+          <h2>Small beginnings, steady growth</h2>
+          <p><strong data-bind="name"></strong> was founded in <strong data-bind="founded"></strong>. Since then the school has grown little by little, and it is still growing.</p>
+          <p>Our motto, <em>&ldquo;<span data-bind="motto"></span>&rdquo;</em>, says what we believe: the values we teach and the children we teach are both treasures worth protecting.</p>
+          <p class="is-placeholder">The school can add its own story here: how it started, who founded it, and what it hopes to become.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION / VISION / VALUES -->
+    <!-- DRAFT wording. Confirm or replace with the school's own mission and vision. -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What Guides Us</span>
+          <h2>Mission, vision and values</h2>
+          <p>Draft wording, to be confirmed by the school.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="card reveal">
+            <div class="icon-box"><i data-lucide="target"></i></div>
+            <h3>Our Mission</h3>
+            <p>To give every child a good education in a caring environment, where knowledge and good character grow together.</p>
+          </div>
+          <div class="card reveal d1">
+            <div class="icon-box gold"><i data-lucide="eye"></i></div>
+            <h3>Our Vision</h3>
+            <p>To be a school that families trust, and that sends out confident, well-mannered young people.</p>
+          </div>
+          <div class="card reveal d2">
+            <div class="icon-box"><i data-lucide="gem"></i></div>
+            <h3>Our Values</h3>
+            <p>Respect, honesty, discipline, care for others and a love for learning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Our Journey</span>
+          <h2>Since <span data-bind="founded"></span></h2>
+          <p>Milestones will be added as the school shares them.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <span class="tag" data-bind="founded"></span>
+            <h3>The school opens its doors</h3>
+            <p>Crystal Cliff Schools is founded.</p>
+          </div>
+          <div class="timeline-item reveal d1">
+            <span class="tag is-placeholder">Year</span>
+            <h3 class="is-placeholder">Milestone to be added</h3>
+            <p class="is-placeholder">A new class, building, award or event.</p>
+          </div>
+          <div class="timeline-item reveal d2">
+            <span class="tag is-placeholder">Year</span>
+            <h3 class="is-placeholder">Milestone to be added</h3>
+            <p class="is-placeholder">Another step in the school's growth.</p>
+          </div>
+          <div class="timeline-item reveal d3">
+            <span class="tag">Today</span>
+            <h3>Still growing</h3>
+            <p>The school keeps improving every year, and is now welcoming new families.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROPRIETOR -->
+    <section class="section alt">
+      <div class="container split">
+        <div class="reveal from-left">
+          <div class="proprietor-photo">
+            <img src="assets/logo.png" alt="Crystal Cliff Schools" style="object-fit:contain;padding:18%;">
+          </div>
+        </div>
+        <div class="split-text reveal from-right">
+          <span class="eyebrow">Leadership</span>
+          <i data-lucide="quote" class="quote-mark"></i>
+          <h2>A word from our proprietor</h2>
+          <p data-bind="proprietor.message" data-placeholder="The proprietor's welcome message will appear here."></p>
+          <p class="signature"><span data-bind="proprietor.name" data-placeholder="Proprietor's name"></span><br><small data-bind="proprietor.title"></small></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STAFF DIRECTORY (placeholders) -->
+    <!-- To add a real teacher, replace the icon with <img src="assets/teacher1.jpg" alt="Name"> -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Our People</span>
+          <h2>Meet our team</h2>
+          <p>The teachers and staff who care for our children.</p>
+        </div>
+        <div class="grid grid-4">
+          <div class="card reveal center">
+            <div class="icon-box" style="margin:0 auto 16px;"><i data-lucide="user"></i></div>
+            <h3 class="is-placeholder">Name</h3>
+            <p class="is-placeholder">Role</p>
+          </div>
+          <div class="card reveal d1 center">
+            <div class="icon-box gold" style="margin:0 auto 16px;"><i data-lucide="user"></i></div>
+            <h3 class="is-placeholder">Name</h3>
+            <p class="is-placeholder">Role</p>
+          </div>
+          <div class="card reveal d2 center">
+            <div class="icon-box" style="margin:0 auto 16px;"><i data-lucide="user"></i></div>
+            <h3 class="is-placeholder">Name</h3>
+            <p class="is-placeholder">Role</p>
+          </div>
+          <div class="card reveal d3 center">
+            <div class="icon-box gold" style="margin:0 auto 16px;"><i data-lucide="user"></i></div>
+            <h3 class="is-placeholder">Name</h3>
+            <p class="is-placeholder">Role</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS WALL (placeholders) -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Achievements</span>
+          <h2>Proud moments</h2>
+          <p>Awards, competitions and results will be shown here.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="card reveal">
+            <div class="icon-box gold"><i data-lucide="trophy"></i></div>
+            <h3 class="is-placeholder">Achievement</h3>
+            <p class="is-placeholder">Details to be added.</p>
+          </div>
+          <div class="card reveal d1">
+            <div class="icon-box"><i data-lucide="medal"></i></div>
+            <h3 class="is-placeholder">Achievement</h3>
+            <p class="is-placeholder">Details to be added.</p>
+          </div>
+          <div class="card reveal d2">
+            <div class="icon-box gold"><i data-lucide="award"></i></div>
+            <h3 class="is-placeholder">Achievement</h3>
+            <p class="is-placeholder">Details to be added.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="section">
+      <div class="container">
+        <div class="cta reveal">
+          <h2>Come and see Crystal Cliff for yourself</h2>
+          <p>Book a visit, meet our team and see where your child could grow.</p>
+          <div class="hero-actions">
+            <a href="admissions.html#visit" class="btn btn-gold"><i data-lucide="calendar-check"></i> Book a School Visit</a>
+            <a href="contact.html" class="btn btn-ghost"><i data-lucide="phone"></i> Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

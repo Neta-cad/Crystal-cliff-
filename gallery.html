@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery | Crystal Cliff Schools</title>
+  <meta name="description" content="Photos from Crystal Cliff Schools: our building, classrooms, activities and events.">
+  <meta name="theme-color" content="#29ABE2">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gallery | Crystal Cliff Schools">
+  <meta property="og:description" content="Life at Crystal Cliff Schools in pictures.">
+  <meta property="og:image" content="assets/logo.png">
+
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Gallery</h1>
+        <p>Life at Crystal Cliff Schools</p>
+        <div class="breadcrumb"><a href="index.html">Home</a> / Gallery</div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <!--
+      HOW TO ADD A REAL PHOTO
+      1. Save the photo in the assets folder (for example assets/classroom1.jpg).
+         Tip: shrink it first so it loads fast (about 200 KB is plenty).
+      2. Replace one "Photo coming soon" tile with:
+
+         <figure class="gallery-item" data-category="classrooms">
+           <img src="assets/classroom1.jpg" alt="A classroom at Crystal Cliff Schools" loading="lazy">
+           <figcaption>Our classroom</figcaption>
+         </figure>
+
+      3. data-category must be one of: building, classrooms, activities, events
+         (it controls which filter button shows the photo).
+
+      Photos of children: only use them with the proprietor's permission.
+    -->
+    <section class="section">
+      <div class="container">
+
+        <div class="section-head reveal">
+          <span class="eyebrow">Photo Gallery</span>
+          <h2>See our school</h2>
+          <p>Photos will be added here as they are taken.</p>
+        </div>
+
+        <div class="filters reveal">
+          <button class="filter-btn is-active" type="button" data-filter="all">All</button>
+          <button class="filter-btn" type="button" data-filter="building">Our Building</button>
+          <button class="filter-btn" type="button" data-filter="classrooms">Classrooms</button>
+          <button class="filter-btn" type="button" data-filter="activities">Activities</button>
+          <button class="filter-btn" type="button" data-filter="events">Events</button>
+        </div>
+
+        <div class="gallery-grid reveal">
+          <figure class="gallery-item" data-category="building"><i data-lucide="camera"></i><figcaption>Photo coming soon</figcaption></figure>
+          <figure class="gallery-item" data-category="building"><i data-lucide="camera"></i><figcaption>Photo coming soon</figcaption></figure>
+          <figure class="gallery-item" data-category="classrooms"><i data-lucide="camera"></i><figcaption>Photo coming soon</figcaption></figure>
+          <figure class="gallery-item" data-category="classrooms"><i data-lucide="camera"></i><figcaption>Photo coming soon</figcaption></figure>
+          <figure class="gallery-item" data-category="activities"><i data-lucide="camera"></i><figcaption>Photo coming soon</figcaption></figure>
+          <figure class="gallery-item" data-category="activities"><i data-lucide="camera"></i><figcaption>Photo coming soon</figcaption></figure>
+          <figure class="gallery-item" data-category="events"><i data-lucide="camera"></i><figcaption>Photo coming soon</figcaption></figure>
+          <figure class="gallery-item" data-category="events"><i data-lucide="camera"></i><figcaption>Photo coming soon</figcaption></figure>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VIDEO SECTION (placeholder) -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Video</span>
+          <h2>School tour</h2>
+          <p>A short video of the school can be added here later.</p>
+        </div>
+        <div class="map-wrap reveal" style="max-width:720px;margin:0 auto;">
+          <div>
+            <i data-lucide="video" class="icon" style="width:40px;height:40px;margin:0 auto 10px;"></i>
+            <p>Video coming soon</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="section">
+      <div class="container">
+        <div class="cta reveal">
+          <h2>Want to see it in person?</h2>
+          <p>Photos are nice, but a visit is better. Come and meet the school.</p>
+          <div class="hero-actions">
+            <a href="admissions.html#visit" class="btn btn-gold"><i data-lucide="calendar-check"></i> Book a School Visit</a>
+            <a href="contact.html" class="btn btn-ghost"><i data-lucide="phone"></i> Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

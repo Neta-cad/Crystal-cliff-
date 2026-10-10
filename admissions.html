@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admissions | Crystal Cliff Schools</title>
+  <meta name="description" content="Apply to Crystal Cliff Schools. Send an admission enquiry or book a school visit.">
+  <meta name="theme-color" content="#29ABE2">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Admissions at Crystal Cliff Schools">
+  <meta property="og:description" content="Send an enquiry or book a school visit.">
+  <meta property="og:image" content="assets/logo.png">
+
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Admissions</h1>
+        <p>Give your child a place to shine</p>
+        <div class="breadcrumb"><a href="index.html">Home</a> / Admissions</div>
+      </div>
+    </section>
+
+    <!-- ADMISSIONS OPEN BANNER (hidden if admissions.open is false) -->
+    <section class="section" style="padding-bottom:0;" data-show-if="admissions.open">
+      <div class="container">
+        <div class="info-card reveal" style="max-width:720px;margin:0 auto;">
+          <div class="icon-box gold"><i data-lucide="graduation-cap"></i></div>
+          <div>
+            <h4>Admissions are open</h4>
+            <p>Send an enquiry below, or book a visit to see the school first.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO APPLY -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">How to Apply</span>
+          <h2>Joining us in four steps</h2>
+        </div>
+        <div class="grid grid-4 steps">
+          <div class="card reveal"><h3>Enquire</h3><p>Fill in the enquiry form below. It goes straight to the school.</p></div>
+          <div class="card reveal d1"><h3>Visit</h3><p>Book a visit and see the school for yourself.</p></div>
+          <div class="card reveal d2"><h3>Apply</h3><p>Complete the admission requirements with the school office.</p></div>
+          <div class="card reveal d3"><h3>Enrol</h3><p>Welcome to the Crystal Cliff family.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REQUIREMENTS AND FEES -->
+    <section class="section alt">
+      <div class="container">
+        <div class="grid grid-2">
+          <div class="card reveal from-left">
+            <div class="icon-box"><i data-lucide="file-text"></i></div>
+            <h3>Typical requirements</h3>
+            <p class="is-placeholder" style="margin-bottom:12px;">Draft list. The school will confirm what it requires.</p>
+            <ul class="check-list">
+              <li><i data-lucide="circle-check" class="icon"></i> Completed admission form</li>
+              <li><i data-lucide="circle-check" class="icon"></i> Child's birth certificate or age declaration</li>
+              <li><i data-lucide="circle-check" class="icon"></i> Passport photographs</li>
+              <li><i data-lucide="circle-check" class="icon"></i> Previous school report, if the child has been to school</li>
+            </ul>
+          </div>
+          <div class="card reveal from-right">
+            <div class="icon-box gold"><i data-lucide="wallet"></i></div>
+            <h3>School fees</h3>
+            <p data-bind="admissions.fees" data-placeholder="Fee details will be shared by the school office. Send an enquiry and we will get back to you."></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENQUIRY FORM (4 steps) -->
+    <section class="section" id="enquire">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Admission Enquiry</span>
+          <h2>Tell us about your child</h2>
+          <p>It takes about a minute. Your details are sent to the school on WhatsApp.</p>
+        </div>
+
+        <div class="form-card reveal">
+          <div class="form-progress" id="admissionProgress">
+            <span></span><span></span><span></span><span></span>
+          </div>
+
+          <form id="admissionForm" novalidate>
+
+            <!-- Step 1 -->
+            <div class="form-step is-active" data-step="1">
+              <h3>Parent or guardian</h3>
+              <div class="field">
+                <label for="parentName">Your full name</label>
+                <input type="text" id="parentName" name="parentName" autocomplete="name" placeholder="e.g. Mrs. Ade Johnson" required>
+                <span class="error-msg">Please enter your name.</span>
+              </div>
+              <div class="field">
+                <label for="parentPhone">Phone number</label>
+                <input type="tel" id="parentPhone" name="parentPhone" autocomplete="tel" inputmode="tel" placeholder="e.g. 0801 234 5678" required>
+                <span class="error-msg">Please enter a valid phone number.</span>
+              </div>
+              <div class="field">
+                <label for="parentEmail">Email (optional)</label>
+                <input type="email" id="parentEmail" name="parentEmail" autocomplete="email" placeholder="you@example.com">
+                <span class="error-msg">Please enter a valid email address.</span>
+              </div>
+              <div class="form-nav">
+                <span></span>
+                <button type="button" class="btn btn-primary" data-next>Next <i data-lucide="arrow-right"></i></button>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="form-step" data-step="2">
+              <h3>Your child</h3>
+              <div class="field">
+                <label for="childName">Child's full name</label>
+                <input type="text" id="childName" name="childName" placeholder="Child's name" required>
+                <span class="error-msg">Please enter the child's name.</span>
+              </div>
+              <div class="field">
+                <label for="childAge">Child's age</label>
+                <input type="number" id="childAge" name="childAge" inputmode="numeric" min="1" max="20" placeholder="e.g. 5" required>
+                <span class="error-msg">Please enter the child's age (1 to 20).</span>
+              </div>
+              <div class="field">
+                <label for="childLevel">Class you are interested in</label>
+                <select id="childLevel" name="childLevel" required>
+                  <option value="">Select a class</option>
+                </select>
+                <span class="error-msg">Please choose a class.</span>
+              </div>
+              <div class="form-nav">
+                <button type="button" class="btn btn-outline" data-prev><i data-lucide="arrow-left"></i> Back</button>
+                <button type="button" class="btn btn-primary" data-next>Next <i data-lucide="arrow-right"></i></button>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="form-step" data-step="3">
+              <h3>A little more</h3>
+              <div class="field">
+                <label for="previousSchool">Previous school (optional)</label>
+                <input type="text" id="previousSchool" name="previousSchool" placeholder="Leave blank if none">
+              </div>
+              <div class="field">
+                <label for="enquiryMessage">Anything you would like us to know? (optional)</label>
+                <textarea id="enquiryMessage" name="enquiryMessage" rows="4" placeholder="Questions, special needs, or when you would like to start"></textarea>
+              </div>
+              <div class="form-nav">
+                <button type="button" class="btn btn-outline" data-prev><i data-lucide="arrow-left"></i> Back</button>
+                <button type="button" class="btn btn-primary" data-next>Review <i data-lucide="arrow-right"></i></button>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="form-step" data-step="4">
+              <h3>Check and send</h3>
+              <ul class="review-list" id="reviewList"></ul>
+              <div class="form-nav">
+                <button type="button" class="btn btn-outline" data-prev><i data-lucide="arrow-left"></i> Back</button>
+                <button type="submit" class="btn btn-gold"><i data-lucide="send"></i> Send enquiry</button>
+              </div>
+            </div>
+
+          </form>
+
+          <!-- Success message (shown by forms.js) -->
+          <div class="form-success" id="admissionSuccess">
+            <div class="icon-box"><i data-lucide="circle-check"></i></div>
+            <h3>Thank you!</h3>
+            <p id="admissionSuccessText">Your enquiry is ready to send. The school will get back to you soon.</p>
+            <p class="mt-2"><a href="index.html" class="btn btn-outline">Back to Home</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOK A SCHOOL VISIT -->
+    <section class="section alt" id="visit">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">School Visit</span>
+          <h2>Come and see the school</h2>
+          <p>Choose a day that suits you and we will confirm on WhatsApp.</p>
+        </div>
+
+        <div class="form-card reveal">
+          <form id="visitForm" novalidate>
+            <div class="field">
+              <label for="visitName">Your full name</label>
+              <input type="text" id="visitName" name="visitName" autocomplete="name" placeholder="Your name" required>
+              <span class="error-msg">Please enter your name.</span>
+            </div>
+            <div class="field">
+              <label for="visitPhone">Phone number</label>
+              <input type="tel" id="visitPhone" name="visitPhone" autocomplete="tel" inputmode="tel" placeholder="e.g. 0801 234 5678" required>
+              <span class="error-msg">Please enter a valid phone number.</span>
+            </div>
+            <div class="field">
+              <label for="visitDate">Preferred date</label>
+              <input type="date" id="visitDate" name="visitDate" required>
+              <span class="error-msg">Please choose a date from today onwards.</span>
+            </div>
+            <div class="field">
+              <label for="visitTime">Preferred time</label>
+              <select id="visitTime" name="visitTime" required>
+                <option value="">Select a time</option>
+                <option>Morning</option>
+                <option>Midday</option>
+                <option>Afternoon</option>
+              </select>
+              <span class="error-msg">Please choose a time.</span>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;"><i data-lucide="calendar-check"></i> Request a visit</button>
+          </form>
+
+          <div class="form-success" id="visitSuccess">
+            <div class="icon-box"><i data-lucide="circle-check"></i></div>
+            <h3>Visit requested</h3>
+            <p id="visitSuccessText">Your visit request is ready to send. The school will confirm the time with you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROSPECTUS AND PARENT PORTAL TEASERS -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          <div class="teaser reveal from-left">
+            <span class="tag">Coming soon</span>
+            <h3>School prospectus</h3>
+            <p style="color:var(--muted);margin:8px 0 14px;">A downloadable guide to the school will be available here.</p>
+            <button class="btn btn-outline" type="button" disabled style="opacity:.6;cursor:not-allowed;"><i data-lucide="download"></i> Download</button>
+          </div>
+          <div class="teaser reveal from-right">
+            <span class="tag">Coming soon</span>
+            <h3>Parent portal</h3>
+            <p style="color:var(--muted);margin:8px 0 14px;">Results, notices and school updates for parents, all in one place.</p>
+            <button class="btn btn-outline" type="button" disabled style="opacity:.6;cursor:not-allowed;"><i data-lucide="lock"></i> Parent login</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Admission questions</h2>
+        </div>
+        <div class="faq reveal">
+          <input class="faq-search" type="search" placeholder="Search questions..." aria-label="Search questions">
+          <div class="faq-item">
+            <button class="faq-q" type="button">How do I apply? <i data-lucide="chevron-down" class="icon"></i></button>
+            <div class="faq-a"><p>Fill in the enquiry form on this page. It sends your details to the school on WhatsApp, and the school will respond with the next steps.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button">Can I visit before enrolling? <i data-lucide="chevron-down" class="icon"></i></button>
+            <div class="faq-a"><p>Yes. Use the Book a School Visit form on this page and choose a day that suits you.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button">What are the school fees? <i data-lucide="chevron-down" class="icon"></i></button>
+            <div class="faq-a"><p>Fees depend on the class. Send an enquiry or contact the school office for the current fee schedule.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button">When does the next term start? <i data-lucide="chevron-down" class="icon"></i></button>
+            <div class="faq-a"><p>Term dates are posted on the home page when the school announces them. You can also ask the school directly.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="section">
+      <div class="container">
+        <div class="cta reveal">
+          <h2>Prefer to talk to someone?</h2>
+          <p>Reach the school directly and we will help with any question.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" data-link="whatsapp" data-wa-message="Hello Crystal Cliff Schools, I would like to ask about admission."><i data-lucide="message-circle"></i> Chat on WhatsApp</a>
+            <a class="btn btn-ghost" data-link="tel"><i data-lucide="phone"></i> Call the School</a>
+            <a href="contact.html" class="btn btn-ghost">Contact Page</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

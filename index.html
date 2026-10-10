@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crystal Cliff Schools | Our Value Our Treasure</title>
+  <meta name="description" content="Crystal Cliff Schools, established 2018. Our Value Our Treasure. Learn about our school, admissions and how to get in touch.">
+  <meta name="theme-color" content="#29ABE2">
+
+  <!-- Link previews (WhatsApp, Facebook). Image link is made absolute after hosting. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Crystal Cliff Schools">
+  <meta property="og:description" content="Our Value Our Treasure. Admissions, school life and contact details.">
+  <meta property="og:image" content="assets/logo.png">
+
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main>
+
+    <!-- 1. HERO -->
+    <section class="hero">
+      <div class="hero-shapes" aria-hidden="true">
+        <span class="shape s1"></span><span class="shape s2"></span>
+        <span class="shape s3"></span><span class="shape s4"></span>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge"><i data-lucide="sparkles" class="icon"></i> Est. <span data-bind="founded"></span></div>
+          <h1>Welcome to <em data-bind="name"></em></h1>
+          <p class="hero-motto" data-bind="motto"></p>
+          <p class="typing-line"><span data-typing data-words="Strong values|Quality learning|A caring community|A bright future"></span></p>
+          <div class="hero-actions">
+            <a href="admissions.html" class="btn btn-gold"><i data-lucide="clipboard-list"></i> Enquire for Admission</a>
+            <a href="admissions.html#visit" class="btn btn-ghost"><i data-lucide="calendar-check"></i> Book a School Visit</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,30 C240,70 480,0 720,25 C960,50 1200,65 1440,25 L1440,60 L0,60 Z"/></svg>
+      </div>
+    </section>
+
+    <!-- 2. QUICK INFO STRIP -->
+    <section class="info-strip">
+      <div class="container">
+        <div class="grid">
+          <div class="info-card reveal" data-show-if="admissions.open">
+            <div class="icon-box gold"><i data-lucide="graduation-cap"></i></div>
+            <div>
+              <h4>Admissions Open</h4>
+              <p data-show-if="admissions.session">Session <span data-bind="admissions.session"></span></p>
+              <p><a href="admissions.html">Apply today</a></p>
+            </div>
+          </div>
+          <div class="info-card reveal d1">
+            <div class="icon-box"><i data-lucide="clock"></i></div>
+            <div>
+              <h4>School Hours</h4>
+              <span class="open-badge" data-open-badge></span>
+            </div>
+          </div>
+          <div class="info-card reveal d2" data-show-if="contact.phone">
+            <div class="icon-box"><i data-lucide="phone"></i></div>
+            <div>
+              <h4>Call Us</h4>
+              <p><a data-link="tel"><span data-bind="contact.phone"></span></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ABOUT PREVIEW -->
+    <section class="section">
+      <div class="container split">
+        <div class="split-media reveal from-left">
+          <!-- Replace with a real photo: <img src="assets/school-front.jpg" alt="Crystal Cliff Schools building"> -->
+          <img class="media-logo" src="assets/logo.png" alt="Crystal Cliff Schools logo">
+        </div>
+        <div class="split-text reveal from-right">
+          <span class="eyebrow">About Us</span>
+          <h2>A growing school with a heart for children</h2>
+          <p>Crystal Cliff Schools was founded in <strong data-bind="founded"></strong> and has been growing steadily since. We believe every child is a treasure, and our work is built around that idea.</p>
+          <ul class="check-list">
+            <li><i data-lucide="circle-check" class="icon"></i> Learning that builds knowledge and character</li>
+            <li><i data-lucide="circle-check" class="icon"></i> A community that parents can trust</li>
+            <li><i data-lucide="circle-check" class="icon"></i> A school that keeps improving every year</li>
+          </ul>
+          <a href="about.html" class="btn btn-primary mt-2">Read Our Story <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. COUNTERS -->
+    <!-- Only the year counter is real. Unhide the others once the school gives you the numbers
+         (remove "hidden" and set data-counter to the real number). -->
+    <section class="section counters">
+      <div class="container">
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:40px;">
+          <div class="counter reveal" style="min-width:170px;">
+            <strong data-counter="years" data-suffix="+">0</strong>
+            <span>Years of nurturing young minds</span>
+          </div>
+          <div class="counter reveal d1" style="min-width:170px;" hidden>
+            <strong data-counter="0">0</strong><span>Students</span>
+          </div>
+          <div class="counter reveal d2" style="min-width:170px;" hidden>
+            <strong data-counter="0">0</strong><span>Teachers</span>
+          </div>
+          <div class="counter reveal d3" style="min-width:170px;" hidden>
+            <strong data-counter="0">0</strong><span>Classes</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. WHY CHOOSE US -->
+    <!-- Confirm these points with the proprietor and edit to match what is true. -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Why Choose Us</span>
+          <h2>Our Value, Our Treasure</h2>
+          <p>What families can expect at Crystal Cliff Schools.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="card reveal"><div class="icon-box"><i data-lucide="heart"></i></div><h3>Strong Values</h3><p>Good character is taught alongside academics, every day.</p></div>
+          <div class="card reveal d1"><div class="icon-box gold"><i data-lucide="users"></i></div><h3>Caring Teachers</h3><p>Teachers who know each child and want them to succeed.</p></div>
+          <div class="card reveal d2"><div class="icon-box"><i data-lucide="shield-check"></i></div><h3>Safe Environment</h3><p>A place where children feel secure, welcome and respected.</p></div>
+          <div class="card reveal"><div class="icon-box gold"><i data-lucide="book-open"></i></div><h3>Quality Learning</h3><p>Lessons designed to build understanding, not just memory.</p></div>
+          <div class="card reveal d1"><div class="icon-box"><i data-lucide="lightbulb"></i></div><h3>Curious Minds</h3><p>Children are encouraged to ask questions and think for themselves.</p></div>
+          <div class="card reveal d2"><div class="icon-box gold"><i data-lucide="handshake"></i></div><h3>Parent Partnership</h3><p>Open communication between the school and every home.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. ACADEMICS (cards come from admissions.levels in config.js) -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Academics</span>
+          <h2>Learning for every stage</h2>
+          <p>Find the right level for your child.</p>
+        </div>
+        <div class="grid grid-3" id="levelCards"></div>
+      </div>
+    </section>
+
+    <!-- 7. TERM COUNTDOWN (hidden automatically if nextTermStart is empty) -->
+    <section class="section countdown-section" data-countdown-section>
+      <div class="container">
+        <h2>Next term begins in</h2>
+        <div class="countdown" id="countdown"></div>
+      </div>
+    </section>
+
+    <!-- 8. PROPRIETOR WELCOME -->
+    <section class="section">
+      <div class="container split">
+        <div class="reveal from-left">
+          <div class="proprietor-photo">
+            <img src="assets/logo.png" alt="Crystal Cliff Schools" id="proprietorPhoto" style="object-fit:contain;padding:18%;">
+          </div>
+        </div>
+        <div class="split-text reveal from-right">
+          <span class="eyebrow">Welcome</span>
+          <i data-lucide="quote" class="quote-mark"></i>
+          <h2>A word from our proprietor</h2>
+          <p data-bind="proprietor.message" data-placeholder="The proprietor's welcome message will appear here."></p>
+          <p class="signature"><span data-bind="proprietor.name" data-placeholder="Proprietor's name"></span><br><small data-bind="proprietor.title"></small></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. MOTTO -->
+    <section class="motto-block">
+      <div class="container reveal">
+        <blockquote>&ldquo;<span data-bind="motto"></span>&rdquo;</blockquote>
+        The motto that guides everything we do
+      </div>
+    </section>
+
+    <!-- 10. GALLERY PREVIEW -->
+    <!-- Replace each placeholder with a real photo, e.g.
+         <figure class="gallery-item" data-category="all"><img src="assets/photo1.jpg" alt="Our compound"><figcaption>Our compound</figcaption></figure> -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Gallery</span>
+          <h2>Life at Crystal Cliff</h2>
+          <p>Photos of our school will be added here.</p>
+        </div>
+        <div class="gallery-grid reveal">
+          <figure class="gallery-item"><i data-lucide="camera"></i><figcaption>Photo coming soon</figcaption></figure>
+          <figure class="gallery-item"><i data-lucide="camera"></i><figcaption>Photo coming soon</figcaption></figure>
+          <figure class="gallery-item"><i data-lucide="camera"></i><figcaption>Photo coming soon</figcaption></figure>
+          <figure class="gallery-item"><i data-lucide="camera"></i><figcaption>Photo coming soon</figcaption></figure>
+          <figure class="gallery-item"><i data-lucide="camera"></i><figcaption>Photo coming soon</figcaption></figure>
+          <figure class="gallery-item"><i data-lucide="camera"></i><figcaption>Photo coming soon</figcaption></figure>
+        </div>
+        <p class="center mt-2"><a href="gallery.html" class="btn btn-outline">View Full Gallery <i data-lucide="arrow-right"></i></a></p>
+      </div>
+    </section>
+
+    <!-- 11. TESTIMONIALS (placeholders, nothing invented) -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Testimonials</span>
+          <h2>What parents say</h2>
+        </div>
+        <div class="slider reveal">
+          <div class="slider-track">
+            <div class="slide"><div class="testimonial"><p class="is-placeholder">A parent's testimonial will appear here.</p><strong>Parent name</strong></div></div>
+            <div class="slide"><div class="testimonial"><p class="is-placeholder">A parent's testimonial will appear here.</p><strong>Parent name</strong></div></div>
+            <div class="slide"><div class="testimonial"><p class="is-placeholder">A parent's testimonial will appear here.</p><strong>Parent name</strong></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. NEWS & EVENTS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">News and Events</span>
+          <h2>What is happening</h2>
+          <p>Term dates, events and announcements will be posted here.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="event-card reveal">
+            <div class="event-date"><strong>--</strong><span>TBA</span></div>
+            <div><h3>Next term resumption</h3><p class="is-placeholder">Date to be announced.</p></div>
+          </div>
+          <div class="event-card reveal d1">
+            <div class="event-date"><strong>--</strong><span>TBA</span></div>
+            <div><h3>School event</h3><p class="is-placeholder">Details to be announced.</p></div>
+          </div>
+          <div class="event-card reveal d2">
+            <div class="event-date"><strong>--</strong><span>TBA</span></div>
+            <div><h3>Open day</h3><p class="is-placeholder">Details to be announced.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. ADMISSION STEPS -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Admissions</span>
+          <h2>Joining us in four steps</h2>
+        </div>
+        <div class="grid grid-4 steps">
+          <div class="card reveal"><h3>Enquire</h3><p>Send us your details through the enquiry form.</p></div>
+          <div class="card reveal d1"><h3>Visit</h3><p>Book a visit and see the school for yourself.</p></div>
+          <div class="card reveal d2"><h3>Apply</h3><p>Complete the admission requirements with our office.</p></div>
+          <div class="card reveal d3"><h3>Enrol</h3><p>Welcome to the Crystal Cliff family.</p></div>
+        </div>
+        <p class="center mt-2"><a href="admissions.html" class="btn btn-primary">Start Admission <i data-lucide="arrow-right"></i></a></p>
+      </div>
+    </section>
+
+    <!-- 14. FAQ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Questions parents ask</h2>
+        </div>
+        <div class="faq reveal">
+          <input class="faq-search" type="search" placeholder="Search questions..." aria-label="Search questions">
+          <div class="faq-item">
+            <button class="faq-q" type="button">How do I apply? <i data-lucide="chevron-down" class="icon"></i></button>
+            <div class="faq-a"><p>Fill in the enquiry form on the Admissions page. It sends your details straight to the school on WhatsApp, and the school will respond.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button">Can I visit before enrolling? <i data-lucide="chevron-down" class="icon"></i></button>
+            <div class="faq-a"><p>Yes. Use the Book a School Visit option on the Admissions page and choose a day that suits you.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button">What are the school fees? <i data-lucide="chevron-down" class="icon"></i></button>
+            <div class="faq-a"><p>Fees depend on the class. Please contact the school office for the current fee schedule.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button">What are the school hours? <i data-lucide="chevron-down" class="icon"></i></button>
+            <div class="faq-a"><p>The Open Now badge on this site shows whether the school is open right now. You can also contact the school to confirm.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button">How can I reach the school? <i data-lucide="chevron-down" class="icon"></i></button>
+            <div class="faq-a"><p>Use the Contact page, tap the WhatsApp button, or call the school using the details in the footer.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15. FIND US -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Find Us</span>
+          <h2>Visit Crystal Cliff Schools</h2>
+        </div>
+        <div class="grid grid-2">
+          <div class="reveal from-left">
+            <ul class="contact-list">
+              <li>
+                <div class="icon-box"><i data-lucide="map-pin"></i></div>
+                <div><h4>Address</h4><p data-bind="contact.address" data-placeholder="School address to be added"></p></div>
+              </li>
+              <li data-show-if="contact.phone">
+                <div class="icon-box"><i data-lucide="phone"></i></div>
+                <div><h4>Phone</h4><a data-link="tel"><span data-bind="contact.phone"></span></a></div>
+              </li>
+              <li data-show-if="contact.email">
+                <div class="icon-box"><i data-lucide="mail"></i></div>
+                <div><h4>Email</h4><a data-link="mail"><span data-bind="contact.email"></span></a></div>
+              </li>
+            </ul>
+            <a class="btn btn-primary" data-link="directions"><i data-lucide="navigation"></i> Get Directions</a>
+          </div>
+          <div class="map-wrap reveal from-right" data-map>
+            <div>
+              <i data-lucide="map" class="icon" style="width:40px;height:40px;margin:0 auto 10px;"></i>
+              <p>Map coming soon</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 16. FINAL CALL TO ACTION -->
+    <section class="section">
+      <div class="container">
+        <div class="cta reveal">
+          <h2>Give your child a place to shine</h2>
+          <p>Talk to us today about admission into Crystal Cliff Schools.</p>
+          <div class="hero-actions">
+            <a href="admissions.html" class="btn btn-gold">Enquire Now</a>
+            <a class="btn btn-ghost" data-link="whatsapp" data-wa-message="Hello Crystal Cliff Schools, I would like to make an enquiry."><i data-lucide="message-circle"></i> Chat on WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script src="js/config.js"></script>
+  <script>
+    /* Build the academics cards from config.js (admissions.levels) */
+    (function () {
+      var box = document.getElementById("levelCards");
+      if (!box || !window.SCHOOL) return;
+      var icons = ["baby", "book-open", "graduation-cap", "school"];
+      box.innerHTML = window.SCHOOL.admissions.levels.map(function (level, i) {
+        return '<div class="card reveal d' + (i % 3) + '">' +
+          '<div class="icon-box' + (i % 2 ? " gold" : "") + '"><i data-lucide="' + icons[i % icons.length] + '"></i></div>' +
+          '<h3>' + level + '</h3>' +
+          '<p>Learn more about our ' + level.toLowerCase() + ' section.</p>' +
+          '<a class="link" href="academics.html">Explore <i data-lucide="arrow-right" class="icon"></i></a>' +
+          '</div>';
+      }).join("");
+    })();
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
